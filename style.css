@@ -51,5 +51,5 @@ h1 {
     text-decoration: underline;
 }
 .completed {
-    text-decoration: line-through;
+    text-decoration: line-through !important;
 }
