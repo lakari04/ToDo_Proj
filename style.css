@@ -4,36 +4,6 @@ html,body {
   flex-direction: column;
 }
 
-main {
-  flex-grow: 1;
-}
-
-header, footer {
-  height: 60px;
-}
-
-header {
-  background-color: #333;
-}
-
-.content {
-  background-color: grey;
-  overflow: hidden;
-}
-
-footer {
-  text-align: center;
-  background-color: #333;
-  color: white;
-  margin-top: auto;
-}
-
-html,body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -62,12 +32,21 @@ html,body {
   color: black;
 }
 
+footer {
+  text-align: center;
+  background-color: #333;
+  color: white;
+  margin-top: auto;
+}
+
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 600px;
   position: relative;
   margin: 0 auto;
   margin-top: 20px;
   margin-bottom: 0;
+  overflow: hidden;
+
 }
 
 .mySlides {
@@ -143,39 +122,15 @@ html,body {
   }
 }
 
-.center-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-  margin-bottom: 30px;
-}
-.accordion {
-  width: 700px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.accordion-item {
-  border-bottom: 1px solid #ddd;
-}
-
-.accordion-header {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
-  cursor: pointer;
-}
-
-.accordion-content {
-  padding: 20px;
-  display: none;
-}
-
-.accordion-content.active {
-  display: block;
+.container {  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr 10fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". . ."
+    ". . .";
 }
 
 button {
